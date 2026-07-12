@@ -228,9 +228,40 @@ img {
 
 .hero-card {
   padding: 24px;
+  position: relative;
+  overflow: hidden;
   transform-origin: center;
   transform: translateY(calc(var(--drift, 0px) + var(--hover-ty, 0px))) translateX(calc(var(--cursor-x, 0) * 1px)) rotateX(calc(var(--cursor-y, 0) * 0.08deg)) rotateY(calc(var(--cursor-x, 0) * 0.12deg)) scale(var(--scale, 1));
   animation: cardLift 700ms cubic-bezier(.2,.9,.2,1) both, floatDrift 8.8s ease-in-out infinite;
+  transition: transform 0.35s cubic-bezier(.2,.9,.2,1), box-shadow 0.35s ease;
+}
+
+.hero-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 18%, rgba(255,255,255,0.15) 50%, transparent 82%);
+  transform: translateX(-120%);
+  pointer-events: none;
+}
+
+.hero-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid rgba(78, 168, 255, 0.18);
+  pointer-events: none;
+}
+
+.hero-card:hover {
+  --hover-ty: -8px;
+  --scale: 1.02;
+  box-shadow: 0 26px 70px rgba(78, 168, 255, 0.16), var(--shadow);
+}
+
+.hero-card:hover::before {
+  animation: cardShine 0.9s ease forwards;
 }
 
 
@@ -565,6 +596,11 @@ img {
 }
 
 @keyframes cardReflect {
+  0% { transform: translateX(-120%); }
+  100% { transform: translateX(120%); }
+}
+
+@keyframes cardShine {
   0% { transform: translateX(-120%); }
   100% { transform: translateX(120%); }
 }
