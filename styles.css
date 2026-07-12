@@ -535,10 +535,16 @@ img {
 .highlight-card:hover,
 .stat:hover {
   --hover-ty: -10px;
-  --scale: 1.03;
+  --scale: 1.04;
   border-color: var(--accent);
-  box-shadow: 0 22px 54px rgba(2,8,23,0.34);
-  transform: translateY(calc(var(--drift, 0px) + var(--hover-ty, 0px))) translateX(calc(var(--cursor-x, 0) * 1px)) rotateX(calc(var(--cursor-y, 0) * 0.08deg)) rotateY(calc(var(--cursor-x, 0) * 0.12deg)) scale(var(--scale,1));
+  box-shadow: 0 24px 60px rgba(2,8,23,0.38);
+  transform: translateY(-12px) scale(1.04) rotate(-1deg);
+  animation: none;
+}
+
+@keyframes cardFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
 }
 
 .meta {
