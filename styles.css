@@ -527,6 +527,20 @@ img {
   margin-top: auto;
   width: fit-content;
 }
+
+.info-card:hover,
+.project-card:hover,
+.contact-card:hover,
+.experience-card:hover,
+.highlight-card:hover,
+.stat:hover {
+  --hover-ty: -10px;
+  --scale: 1.03;
+  border-color: var(--accent);
+  box-shadow: 0 22px 54px rgba(2,8,23,0.34);
+  transform: translateY(calc(var(--drift, 0px) + var(--hover-ty, 0px))) translateX(calc(var(--cursor-x, 0) * 1px)) rotateX(calc(var(--cursor-y, 0) * 0.08deg)) rotateY(calc(var(--cursor-x, 0) * 0.12deg)) scale(var(--scale,1));
+}
+
 .meta {
   color: var(--accent);
   font-weight: 600;
