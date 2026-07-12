@@ -171,10 +171,10 @@ img {
 
 .quick-stats .stat {
   background: linear-gradient(180deg, rgba(20,33,50,0.94), rgba(16,28,42,0.9));
-  padding: 18px 22px;
+  padding: 24px 28px;
   border: 1px solid var(--border);
-  border-radius: 16px;
-  min-width: 180px;
+  border-radius: 18px;
+  min-width: 220px;
   box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
