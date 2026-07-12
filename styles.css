@@ -588,9 +588,9 @@ img {
   width: 12px;
   height: 12px;
   border-radius: 999px;
-  background: linear-gradient(135deg, #7fd2ff, #4ea8ff);
-  border: 1px solid rgba(15, 23, 36, 0.8);
-  box-shadow: 0 0 0 2px rgba(127, 210, 255, 0.12), 0 0 8px rgba(78, 168, 255, 0.18);
+  background: linear-gradient(135deg, rgba(78,168,255,0.95), rgba(78,168,255,0.72));
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 0 0 1px rgba(78,168,255,0.16), 0 6px 18px rgba(78,168,255,0.14);
   z-index: 2;
   animation: livePulse 1.8s ease-in-out infinite;
 }
@@ -633,9 +633,9 @@ img {
 }
 
 @keyframes livePulse {
-  0% { transform: scale(0.95); box-shadow: 0 0 0 2px rgba(127, 210, 255, 0.12), 0 0 8px rgba(78, 168, 255, 0.18); }
-  50% { transform: scale(1.08); box-shadow: 0 0 0 3px rgba(127, 210, 255, 0.09), 0 0 10px rgba(78, 168, 255, 0.22); }
-  100% { transform: scale(0.95); box-shadow: 0 0 0 2px rgba(127, 210, 255, 0.12), 0 0 8px rgba(78, 168, 255, 0.18); }
+  0% { transform: scale(0.95); box-shadow: 0 0 0 1px rgba(78,168,255,0.16), 0 6px 18px rgba(78,168,255,0.14); }
+  50% { transform: scale(1.06); box-shadow: 0 0 0 2px rgba(78,168,255,0.12), 0 8px 20px rgba(78,168,255,0.18); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 1px rgba(78,168,255,0.16), 0 6px 18px rgba(78,168,255,0.14); }
 }
 
 @keyframes cardShine {
