@@ -575,17 +575,29 @@ img {
   animation: cardHoverPulse 0.4s ease forwards;
 }
 
+.info-card::before,
+.project-card::before,
+.contact-card::before,
+.experience-card::before,
+.highlight-card::before,
+.stat::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 20%, rgba(255,255,255,0.16) 45%, transparent 70%);
+  transform: translateX(-120%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
 .info-card:hover::before,
 .project-card:hover::before,
 .contact-card:hover::before,
 .experience-card:hover::before,
 .highlight-card:hover::before,
 .stat:hover::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(120deg, transparent 20%, rgba(255,255,255,0.16) 45%, transparent 70%);
-  transform: translateX(-120%);
+  opacity: 1;
   animation: cardReflect 0.7s ease forwards;
 }
 
