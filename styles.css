@@ -516,6 +516,8 @@ img {
   transform-origin: center;
   will-change: transform, box-shadow;
   animation: floatDrift 9.2s ease-in-out infinite;
+  position: relative;
+  overflow: hidden;
 }
 
 .project-card {
@@ -539,12 +541,32 @@ img {
   border-color: var(--accent);
   box-shadow: 0 24px 60px rgba(2,8,23,0.38);
   transform: translateY(-12px) scale(1.04) rotate(-1deg);
-  animation: none;
+  animation: cardHoverPulse 0.4s ease forwards;
 }
 
-@keyframes cardFloat {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-5px); }
+.info-card:hover::before,
+.project-card:hover::before,
+.contact-card:hover::before,
+.experience-card:hover::before,
+.highlight-card:hover::before,
+.stat:hover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 20%, rgba(255,255,255,0.16) 45%, transparent 70%);
+  transform: translateX(-120%);
+  animation: cardReflect 0.7s ease forwards;
+}
+
+@keyframes cardHoverPulse {
+  0% { transform: translateY(0) scale(1) rotate(0deg); }
+  50% { transform: translateY(-8px) scale(1.02) rotate(-0.6deg); }
+  100% { transform: translateY(-12px) scale(1.04) rotate(-1deg); }
+}
+
+@keyframes cardReflect {
+  0% { transform: translateX(-120%); }
+  100% { transform: translateX(120%); }
 }
 
 .meta {
