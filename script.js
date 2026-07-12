@@ -38,6 +38,15 @@ document.addEventListener('DOMContentLoaded', function () {
     io.observe(c);
   });
 
+  const cardDots = document.querySelectorAll('.hero-card, .info-card, .project-card, .contact-card, .experience-card, .highlight-card, .stat');
+  cardDots.forEach(card => {
+    if (card.querySelector('.card-live-dot')) return;
+    const dot = document.createElement('span');
+    dot.className = 'card-live-dot';
+    dot.setAttribute('aria-hidden', 'true');
+    card.appendChild(dot);
+  });
+
     // Mobile nav toggle
     const navToggle = document.querySelector('.nav-toggle');
     const navLinks = document.querySelector('.nav-links');
