@@ -583,6 +583,25 @@ img {
 .stat::before {
   content: "";
   position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #3ee08a, #7ef0b2);
+  box-shadow: 0 0 0 0 rgba(62, 224, 138, 0.45), 0 0 12px rgba(62, 224, 138, 0.3);
+  z-index: 2;
+  animation: livePulse 1.8s ease-in-out infinite;
+}
+
+.info-card::after,
+.project-card::after,
+.contact-card::after,
+.experience-card::after,
+.highlight-card::after,
+.stat::after {
+  content: "";
+  position: absolute;
   inset: 0;
   background: linear-gradient(120deg, transparent 20%, rgba(255,255,255,0.16) 45%, transparent 70%);
   transform: translateX(-120%);
@@ -591,12 +610,12 @@ img {
   transition: opacity 0.2s ease;
 }
 
-.info-card:hover::before,
-.project-card:hover::before,
-.contact-card:hover::before,
-.experience-card:hover::before,
-.highlight-card:hover::before,
-.stat:hover::before {
+.info-card:hover::after,
+.project-card:hover::after,
+.contact-card:hover::after,
+.experience-card:hover::after,
+.highlight-card:hover::after,
+.stat:hover::after {
   opacity: 1;
   animation: cardReflect 0.7s ease forwards;
 }
@@ -610,6 +629,12 @@ img {
 @keyframes cardReflect {
   0% { transform: translateX(-120%); }
   100% { transform: translateX(120%); }
+}
+
+@keyframes livePulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(62, 224, 138, 0.45), 0 0 12px rgba(62, 224, 138, 0.3); }
+  50% { transform: scale(1.15); box-shadow: 0 0 0 6px rgba(62, 224, 138, 0.08), 0 0 16px rgba(62, 224, 138, 0.35); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(62, 224, 138, 0.45), 0 0 12px rgba(62, 224, 138, 0.3); }
 }
 
 @keyframes cardShine {
