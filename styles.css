@@ -567,10 +567,11 @@ img {
 .project-card {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .project-card .btn {
-  margin-top: auto;
+  margin-top: 16px;
   width: fit-content;
 }
 
