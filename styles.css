@@ -536,6 +536,15 @@ img {
   gap: 16px;
 }
 
+.film-work .project-grid {
+  align-items: stretch;
+  grid-auto-rows: minmax(320px, auto);
+}
+
+.film-work .project-card {
+  height: 100%;
+}
+
 .info-card,
 .project-card,
 .contact-card,
