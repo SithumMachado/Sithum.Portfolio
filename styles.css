@@ -731,9 +731,11 @@ img {
   .navbar {
     border-radius: 18px;
     padding: 12px 14px;
-    flex-direction: column;
-    gap: 8px;
+    flex-direction: row;
+    gap: 0.5rem;
     width: 100%;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .footer {
@@ -747,9 +749,9 @@ img {
     justify-content: center;
   }
 
-  /* Keep brand on the left and hamburger on the right when stacked */
-  .navbar .brand { align-self: flex-start; }
-  .navbar .nav-toggle { align-self: flex-end; }
+  /* Ensure brand stays left and hamburger stays right on small screens */
+  .navbar .brand { margin: 0; }
+  .navbar .nav-toggle { margin: 0; }
 
   .hero {
     padding-top: 16px;
