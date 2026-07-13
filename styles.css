@@ -557,6 +557,39 @@ img {
   flex-direction: column;
 }
 
+/* Film marquee: auto-scroll right-to-left */
+.film-marquee {
+  overflow: hidden;
+  padding: 12px 0;
+}
+.film-track {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+  width: calc(200% + 40px);
+  /* animate leftwards so content moves right-to-left visually */
+  animation: marquee-left 28s linear infinite;
+}
+.film-marquee:hover .film-track { animation-play-state: paused; }
+.film-set {
+  display: flex;
+  gap: 20px;
+}
+.film-set .project-card {
+  min-width: 300px;
+  max-width: 320px;
+}
+
+@keyframes marquee-left {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 700px) {
+  .film-set .project-card { min-width: 220px; max-width: 240px; }
+  .film-track { animation-duration: 36s; }
+}
+
 .project-card .btn {
   margin-top: auto;
   width: fit-content;
