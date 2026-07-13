@@ -538,11 +538,14 @@ img {
 
 .film-work .project-grid {
   align-items: stretch;
-  grid-auto-rows: minmax(320px, auto);
+  grid-auto-rows: 360px;
 }
 
 .film-work .project-card {
+  display: flex;
+  flex-direction: column;
   height: 100%;
+  align-self: stretch;
 }
 
 .info-card,
