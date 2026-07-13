@@ -557,38 +557,6 @@ img {
   flex-direction: column;
 }
 
-/* Film marquee: horizontal auto-scroll left-to-right */
-.film-marquee {
-  overflow: hidden;
-  padding: 12px 0;
-}
-.film-track {
-  display: flex;
-  gap: 20px;
-  align-items: stretch;
-  /* The track contains two identical sets; animate from -50% to 0 to move right */
-  animation: marquee-right 28s linear infinite;
-}
-.film-set {
-  display: flex;
-  gap: 20px;
-}
-.film-set .project-card {
-  min-width: 300px;
-  max-width: 320px;
-}
-
-@keyframes marquee-right {
-  0% { transform: translateX(-50%); }
-  100% { transform: translateX(0%); }
-}
-
-/* Reduce speed and stack responsively on small screens */
-@media (max-width: 700px) {
-  .film-set .project-card { min-width: 240px; max-width: 260px; }
-  .film-track { animation-duration: 36s; }
-}
-
 .project-card .btn {
   margin-top: auto;
   width: fit-content;
