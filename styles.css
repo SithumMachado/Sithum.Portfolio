@@ -733,6 +733,7 @@ img {
     padding: 12px 14px;
     flex-direction: column;
     gap: 8px;
+    width: 100%;
   }
 
   .footer {
@@ -745,6 +746,10 @@ img {
     flex-wrap: wrap;
     justify-content: center;
   }
+
+  /* Keep brand on the left and hamburger on the right when stacked */
+  .navbar .brand { align-self: flex-start; }
+  .navbar .nav-toggle { align-self: flex-end; }
 
   .hero {
     padding-top: 16px;
