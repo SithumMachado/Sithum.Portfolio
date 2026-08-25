@@ -5,322 +5,283 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Professional portfolio website for Sithum Machado, a web developer and software engineering intern."
+      content="Professional portfolio and creative space for Sithum Machado, Software Engineering Undergraduate and Filmmaker."
     />
-    <title>Sithum Machado | Portfolio</title>
-    <!-- Inter font for a modern neutral look -->
+    <title>Sithum Machado — Software Engineer & Filmmaker</title>
+    <!-- Inter & JetBrains Mono for a sleek engineering feel -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Crect width='100%25' height='100%25' rx='12' fill='%2310222e'/%3E%3Ctext x='50%25' y='54%25' font-size='28' text-anchor='middle' fill='%234ea8ff' font-family='Inter, Arial, sans-serif'%3ESM%3C/text%3E%3C/svg%3E">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Crect width='100%25' height='100%25' rx='14' fill='%23090d16'/%3E%3Ctext x='50%25' y='55%25' font-size='26' font-weight='bold' text-anchor='middle' fill='%2338bdf8' font-family='Inter, sans-serif'%3ESM%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- Ambient Background Lighting -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+
     <div class="page-shell">
-      <header class="hero" id="top">
+      <!-- Navbar -->
+      <header class="header" id="top">
         <nav class="navbar">
-          <a class="brand" href="#top">Sithum Machado</a>
+          <a class="brand" href="#top">
+            <span class="brand-badge">SM</span>
+            <span class="brand-name">Sithum Machado</span>
+          </a>
+          
           <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
-            <svg width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1H21M1 7H21M1 13H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
           </button>
+
           <div class="nav-links" role="navigation">
             <a href="#about">About</a>
-            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
-            <a href="#film-work">Film Work</a>
-            <a href="#contact">Contact</a>
+            <a href="#films">Film Work</a>
+            <a href="#contact" class="nav-cta">Let's Talk</a>
           </div>
         </nav>
 
-        <div class="hero-grid">
-          <div class="hero-content">
-            <p class="eyebrow">Undergraduate • Software Engineer Intern • Filmmaker</p>
-            <h1>Crafting thoughtful digital experiences with code.</h1>
-            <p class="hero-text">
-              I am a passionate Software Engineering student with a strong foundation in front-end development, web applications, and problem-solving. 
-              I enjoy building modern, user-friendly digital experiences by combining technical skills with creativity and innovation. Alongside my journey in software development, I explore filmmaking as a creative outlet, bringing stories to life through visual storytelling and direction.
-
-            </p>
-            <div class="actions">
-              <a class="btn btn-primary" href="#projects">View Projects</a>
-              <a class="btn btn-secondary" href="#contact">Get In Touch</a>
-              <a class="btn btn-secondary" href="CV_SSMMachado (7).pdf" download="Sithum_Machado_CV.pdf">Download CV</a>
+        <!-- Hero Section -->
+        <div class="hero-section">
+          <div class="hero-intro">
+            <div class="status-pill">
+              <span class="live-dot"></span>
+              <span>Available for Software Engineering Internships</span>
             </div>
-            <div class="quick-stats">
-              <div class="stat">
-                <strong><span class="count" data-target="4">0</span><span class="plus">+</span></strong>
-                <span>Projects Built</span>
+            <h1>Architecting clean code.<br /><span class="gradient-text">Directing visual stories.</span></h1>
+            <p class="hero-desc">
+              I’m an undergraduate Software Engineering student at SLIIT City Uni and an award-winning filmmaker. I bridge technical problem-solving with creative design to build robust digital platforms and evocative cinematic experiences.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#projects">Explore Portfolio</a>
+              <a class="btn btn-secondary" href="CV_SSMMachado (7).pdf" download="Sithum_Machado_CV.pdf">Download Resume</a>
+            </div>
+
+            <div class="hero-metrics">
+              <div class="metric-item">
+                <span class="metric-num">06</span>
+                <span class="metric-label">Films Directed</span>
               </div>
-              <div class="stat">
-                <strong><span class="count" data-target="1">0</span></strong>
-                <span>Current Internship</span>
+              <div class="divider-vertical"></div>
+              <div class="metric-item">
+                <span class="metric-num">04+</span>
+                <span class="metric-label">Core Systems Built</span>
               </div>
-              <div class="stat">
-                <strong><span class="count" data-target="100" data-suffix="%">0</span></strong>
-                <span>Dedicated</span>
+              <div class="divider-vertical"></div>
+              <div class="metric-item">
+                <span class="metric-num">1st</span>
+                <span class="metric-label">Current Intern @ WattSoft</span>
               </div>
             </div>
           </div>
 
-          <div class="hero-card role-card" aria-label="Current role summary">
-            <h2>Software Engineer Intern</h2>
-            <p class="meta">WattSoft (PVT) Ltd • Feb 2026 – Present</p>
-            <p>
-              Currently contributing to the development and maintenance of the CSH System.
-              Focused on bug fixing, functional improvements, testing, and collaborating with
-              the engineering team to improve reliability and performance.
+          <!-- Hero Highlight Card / Current Role -->
+          <div class="hero-card">
+            <div class="card-header-badge">Current Role</div>
+            <h3>Software Engineer Intern</h3>
+            <p class="card-company">WattSoft (PVT) Ltd • Feb 2026 – Present</p>
+            <p class="card-summary">
+              Contributing directly to the development, stability testing, and debugging of the enterprise CSH System alongside experienced engineering teams.
             </p>
-            <ul class="hero-list">
-              <li>Identifying & resolving software bugs</li>
-              <li>Supporting system enhancements and testing</li>
-              <li>Collaborating on maintenance and deployments</li>
+            <ul class="tech-stack-mini">
+              <li>Debugging & QA</li>
+              <li>System Maintenance</li>
+              <li>Enterprise Deployment</li>
             </ul>
           </div>
         </div>
       </header>
 
       <main>
-        <section class="section about" id="about">
-          <div class="section-heading">
-            <p class="eyebrow">About</p>
-            <h2>Building modern websites with clarity and purpose.</h2>
+        <!-- About Section -->
+        <section class="section about-section" id="about">
+          <div class="section-header">
+            <span class="section-tag">01 / Background</span>
+            <h2>Driven by precision and narrative.</h2>
           </div>
           <div class="about-grid">
-            <p>
-              I am a driven undergraduate pursuing a BSc (Hons) in Computer Science with a
-              strong passion for web development and technology. My experience includes
-              creating responsive interfaces, developing full-stack web applications, and
-              contributing to real-world software maintenance and bug fixing.
-            </p>
-            <div class="highlight-boxes">
-              <div class="badges" aria-label="Core skills">
-                <span class="badge" title="React">
-                  <span class="badge-icon html" aria-hidden="true"></span>
-                  <span class="badge-label">React</span>
-                </span>
-                <span class="badge" title="HTML">
-                  <span class="badge-icon html" aria-hidden="true"></span>
-                  <span class="badge-label">HTML</span>
-                </span>
-                <span class="badge" title="CSS">
-                  <span class="badge-icon css" aria-hidden="true"></span>
-                  <span class="badge-label">CSS</span>
-                </span>
-                <span class="badge" title="JavaScript">
-                  <span class="badge-icon js" aria-hidden="true"></span>
-                  <span class="badge-label">JavaScript</span>
-                </span>
-                <span class="badge" title="PHP">
-                  <span class="badge-icon php" aria-hidden="true"></span>
-                  <span class="badge-label">PHP</span>
-                </span>
-                <span class="badge" title="SQL">
-                  <span class="badge-icon sql" aria-hidden="true"></span>
-                  <span class="badge-label">SQL</span>
-                </span>
-                <span class="badge" title="Selenium">
-                  <span class="badge-icon sql" aria-hidden="true"></span>
-                  <span class="badge-label">Selenium</span>
-                  </span> 
-                  <span class="badge" title="Playwright">
-                  <span class="badge-icon sql" aria-hidden="true"></span>
-                  <span class="badge-label">Playwright</span>
-                </span>
-                </span>
+            <div class="about-text-card">
+              <p>
+                Pursuing a BSc (Hons) in Computer Science at SLIIT City Uni, my technical focus spans front-end architecture, responsive web interfaces, and backend integration. Whether refactoring code modules or organizing complex UI states, I approach engineering with methodical structure.
+              </p>
+              <p>
+                Outside of software engineering, filmmaking serves as my ultimate creative outlet. Having directed six short films—including award-winning entries like <em>Blessed Rat.</em>—I understand the value of deep focus, team collaboration, and meticulous project management from concept to final cut.
+              </p>
+            </div>
+            <div class="about-meta-card">
+              <h4>Quick Facts</h4>
+              <ul class="fact-list">
+                <li><strong>Education:</strong> BSc (Hons) Computer Science, SLIIT City Uni</li>
+                <li><strong>Alumnus:</strong> Trinity College, Kandy (A/L 2023, O/L 2019)</li>
+                <li><strong>Base:</strong> Colombo & Kandy, Sri Lanka</li>
+                <li><strong>Interests:</strong> UI Engineering, Mobile Architecture, Directing</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="section" id="experience">
+          <div class="section-header">
+            <span class="section-tag">02 / Experience</span>
+            <h2>Professional journey.</h2>
+          </div>
+          <div class="timeline-container">
+            <div class="timeline-card">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <div class="timeline-top">
+                  <h3>Software Engineer Intern</h3>
+                  <span class="badge-role">Current</span>
+                </div>
+                <p class="timeline-company">WattSoft (PVT) Ltd • Feb 2026 – Present</p>
+                <p>
+                  Engaged in full software life-cycle support for the CSH System. Responsible for tracking bugs, implementing feature enhancements, executing functional tests, and collaborating on deployment routines to maximize uptime and efficiency.
+                </p>
               </div>
             </div>
           </div>
         </section>
 
-        <section class="section education" id="education">
-          <div class="section-heading">
-            <p class="eyebrow">Education</p>
-            <h2>Academic foundation and continuous growth.</h2>
+        <!-- Skills Section -->
+        <section class="section" id="skills">
+          <div class="section-header">
+            <span class="section-tag">03 / Expertise</span>
+            <h2>Technical & Creative Skills.</h2>
           </div>
-          <div class="card-grid">
-            <article class="info-card">
-              <h3>SLIIT City Uni</h3>
-              <p class="meta">Oct 2023 – Present</p>
-              <p>BSc. (Hons) in Computer Science</p>
-            </article>
-            <article class="info-card">
-              <h3>Trinity College, Kandy</h3>
-              <p class="meta">G.C.E. Advanced Level • 2023</p>
-              <p>Completed Advanced Level studies with a strong academic foundation.</p>
-            </article>
-            <article class="info-card">
-              <h3>Trinity College, Kandy</h3>
-              <p class="meta">G.C.E. Ordinary Level • 2019</p>
-              <p>Completed Ordinary Level studies and built early technical interest.</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section skills" id="skills">
-          <div class="section-heading">
-            <p class="eyebrow">Skills</p>
-            <h2>Core abilities shaped by practice and curiosity.</h2>
-          </div>
-          <div class="card-grid skills-grid">
-            <article class="info-card">
-              <h3>Front-End Development</h3>
-              <p>HTML, CSS, Bootstrap, React</p>
-            </article>
-            <article class="info-card">
-              <h3>Web Applications</h3>
-              <p>Responsive design and interactive user interfaces</p>
-            </article>
-            <article class="info-card">
-              <h3>Programming</h3>
-              <p>Java, JavaScript, C, C++</p>
-            </article>
-            <article class="info-card">
-              <h3>Backend & Database</h3>
-              <p>PHP, SQL Server, form handling, data management</p>
-            </article>
-            <article class="info-card">
-              <h3>UI/UX Design</h3>
-              <p>Figma and Canva for modern interfaces</p>
-            </article>
-            <article class="info-card">
-              <h3>Problem Solving</h3>
-              <p>Bug fixing, troubleshooting, and system improvement</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section experience">
-          <div class="section-heading">
-            <p class="eyebrow">Experience</p>
-            <h2>Professional growth through real-world contribution.</h2>
-          </div>
-          <div class="experience-card">
-            <div class="timeline-dot"></div>
-            <div>
-              <h3>Software Engineer Intern</h3>
-              <p class="meta">WattSoft (PVT) Ltd • Feb 2026 – Present</p>
-              <p>
-                Currently contributing to the development and maintenance of the CSH System.
-                Responsibilities include identifying and fixing software bugs, improving
-                system stability, and collaborating with the team on enhancements and testing.
-              </p>
+          <div class="skills-bento">
+            <div class="skill-box">
+              <h3>Frontend Development</h3>
+              <p>React, HTML5, Modern CSS, JavaScript (ES6+), Bootstrap, Responsive UI/UX</p>
+            </div>
+            <div class="skill-box">
+              <h3>Languages & Backend</h3>
+              <p>Java, C, C++, PHP, SQL Server, RESTful principles, Database Management</p>
+            </div>
+            <div class="skill-box">
+              <h3>Testing & Automation</h3>
+              <p>Selenium, Playwright, Automated QA workflows, Bug tracking & resolution</p>
+            </div>
+            <div class="skill-box">
+              <h3>Creative & Tooling</h3>
+              <p>Figma, Canva, Adobe Premiere Pro, CapCut, Git, VS Code</p>
             </div>
           </div>
         </section>
 
-        <section class="section projects" id="projects">
-          <div class="section-heading">
-            <p class="eyebrow">Projects</p>
-            <h2>Selected work that reflects both creativity and technical discipline.</h2>
+        <!-- Projects Section -->
+        <section class="section" id="projects">
+          <div class="section-header">
+            <span class="section-tag">04 / Software Work</span>
+            <h2>Selected Engineering Projects.</h2>
           </div>
-          <div class="project-grid">
-            <article class="project-card">
+          <div class="bento-grid">
+            <article class="bento-card span-2">
+              <div class="card-top-tags"><span>Java / OOP</span><span>Enterprise</span></div>
               <h3>Tech Repair Management System</h3>
-              <p>
-                A Java-based system developed with OOP principles for supplier, customer, and
-                inventory management.
-              </p>
+              <p>An enterprise-grade system architected using robust Object-Oriented Programming principles to streamline supplier tracking, customer management, and comprehensive inventory workflows.</p>
             </article>
-            <article class="project-card">
-              <h3>Dynamic E-Commerce Web Application</h3>
-              <p>
-                A full-stack food store website built with HTML, CSS, JavaScript, PHP, and SQL.
-              </p>
+            
+            <article class="bento-card">
+              <div class="card-top-tags"><span>Full-Stack</span><span>PHP & SQL</span></div>
+              <h3>Dynamic E-Commerce Platform</h3>
+              <p>A full-featured food store web application featuring dynamic cart logic, secure form handling, and relational database management.</p>
             </article>
-            <article class="project-card">
-              <h3>Local Band Digital Showcase Platform</h3>
-              <p>
-                A polished full-stack site for Yaka Crew, featuring events, media, bookings,
-                merchandise, and admin functionality.
-              </p>
+
+            <article class="bento-card">
+              <div class="card-top-tags"><span>Web Application</span><span>Full-Stack</span></div>
+              <h3>Yaka Crew Digital Showcase</h3>
+              <p>A polished, high-performance platform built for a local band featuring event schedules, media galleries, booking inquiries, and admin control.</p>
             </article>
-            <article class="project-card">
-              <h3>CSH System Development & Maintenance</h3>
-              <p>
-                Ongoing work focused on debugging, maintenance, testing, and functional
-                improvements in a real software platform.
-              </p>
+
+            <article class="bento-card span-2">
+              <div class="card-top-tags"><span>Production</span><span>Enterprise Software</span></div>
+              <h3>CSH System Maintenance & Testing</h3>
+              <p>Ongoing production contributions focusing on systematic code auditing, bug mitigation, test execution, and feature expansion within a live corporate environment.</p>
             </article>
           </div>
         </section>
 
-        <section class="section film-work" id="film-work">
-          <div class="section-heading">
-            <p class="eyebrow">Film Work</p>
-            <h2>Visual stories, creative projects, and moving moments.</h2>
+        <!-- Film Work Section -->
+        <section class="section" id="films">
+          <div class="section-header">
+            <span class="section-tag">05 / Directorial Work</span>
+            <h2>Cinematic Productions.</h2>
           </div>
-          <div class="project-grid">
-            <article class="project-card">
+          <div class="films-grid">
+            <article class="film-card">
+              <div class="film-badge">Award Winner</div>
               <h3>Blessed Rat.</h3>
-              <p><strong>Award:</strong> 2nd Place – Frame by Frame Short Film Competition, Rotaract Club of the University of Ruhuna</p>
-              <p>
-                Blessed Rat. is an award-winning short film by Wanderlust Pictures. As the director,
-                I led the creative vision and storytelling, shaping the film’s narrative and overall
-                presentation.
-              </p>
-              <a class="btn btn-secondary" href="https://www.youtube.com/watch?v=I-2hxhEdKAs&t=247s" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+              <p class="film-award">2nd Place – Frame by Frame Short Film Competition (University of Ruhuna)</p>
+              <p>Directed under Wanderlust Pictures. An evocative short film focusing on tight narrative pacing and psychological depth.</p>
+              <a href="https://www.youtube.com/watch?v=I-2hxhEdKAs&t=247s" target="_blank" rel="noopener noreferrer" class="film-link">Watch on YouTube →</a>
             </article>
-            <article class="project-card">
 
+            <article class="film-card">
+              <div class="film-badge">Wanderlust Pictures</div>
               <h3>WITHIN</h3>
-              <p><strong>Is She Trapped?</strong></p>
-              <p>
-                A short film by Wanderlust Pictures. As the writer and director, I shaped the film’s narrative and visual storytelling, bringing the story to life through direction and creative vision.
-              </p>
-              <a class="btn btn-secondary" href="https://www.youtube.com/watch?v=1V-BkqLXflQ" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+              <p class="film-award">Is She Trapped?</p>
+              <p>Written and directed by Sithum Machado. Explores confinement and psychological tension through careful visual composition.</p>
+              <a href="https://www.youtube.com/watch?v=1V-BkqLXflQ" target="_blank" rel="noopener noreferrer" class="film-link">Watch on YouTube →</a>
             </article>
-            <article class="project-card">
 
+            <article class="film-card">
+              <div class="film-badge">Wanderlust Pictures</div>
               <h3>In His Mind</h3>
-              <p><strong>A Boy Who Lives Alone</strong></p>
-              <p>A short film by Wanderlust Pictures. A story that follows a boy living alone, struggling to understand the changes and mysteries unfolding around him. As the director, I shaped the film’s concept and visual storytelling, bringing the narrative to life through direction and creative vision.
-              </p>
-              <a class="btn btn-secondary" href="https://www.youtube.com/watch?v=DsphiX0nbBc" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+              <p class="film-award">A Boy Who Lives Alone</p>
+              <p>A narrative study exploring isolation, internal struggles, and quiet atmospheric transformations.</p>
+              <a href="https://www.youtube.com/watch?v=DsphiX0nbBc" target="_blank" rel="noopener noreferrer" class="film-link">Watch on YouTube →</a>
             </article>
-            <article class="project-card">
+
+            <article class="film-card">
+              <div class="film-badge">Solo Production</div>
               <h3>Shattered Silence</h3>
-              <p><strong>Boy In Silence</strong></p>
-              <p>A narrative short that explores silence and memory through visual composition. A boy who has gone through a breakup spends his time alone and lonely in the house. I directed the film and managed the production from script to final edit.</p>
-              <a class="btn btn-secondary" href="https://www.youtube.com/watch?v=tAfbE1P3FNY&t=138s&pp=0gcJCVELAYcqIYzv" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+              <p class="film-award">Boy In Silence</p>
+              <p>Managed from script to final grade. Follows the solitary aftermath of a relationship breakup.</p>
+              <a href="https://www.youtube.com/watch?v=tAfbE1P3FNY&t=138s" target="_blank" rel="noopener noreferrer" class="film-link">Watch on YouTube →</a>
             </article>
-            <article class="project-card">
+
+            <article class="film-card">
+              <div class="film-badge">Atmospheric Thriller</div>
               <h3>The Unmarked Date</h3>
-              <p><strong>A Crime?</strong></p>
-              <p>An atmospheric film focused on mood, lighting, crime & confusion. I led the creative direction to create a strong visual narrative.</p>
-              <a class="btn btn-secondary" href="https://www.youtube.com/watch?v=HAJeOyt_zwY" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+              <p class="film-award">A Crime & Confusion Study</p>
+              <p>An experimental piece heavy on shadow, tone, lighting setup, and non-linear tension.</p>
+              <a href="https://www.youtube.com/watch?v=HAJeOyt_zwY" target="_blank" rel="noopener noreferrer" class="film-link">Watch on YouTube →</a>
             </article>
-            <article class="project-card">
+
+            <article class="film-card">
+              <div class="film-badge">Drama</div>
               <h3>Another Year</h3>
-              <p><strong>Another Year Without Love</strong></p>
-              <p>A love story that waits another year to be told.
-Though the journey is delayed, the emotions, memories, and meaning behind it remain alive.</p>
-              <a class="btn btn-secondary" href="https://www.youtube.com/watch?v=0aFVvb4AtB8" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+              <p class="film-award">Another Year Without Love</p>
+              <p>A poignant reflection on delayed love, enduring memories, and unspoken emotional weight.</p>
+              <a href="https://www.youtube.com/watch?v=0aFVvb4AtB8" target="_blank" rel="noopener noreferrer" class="film-link">Watch on YouTube →</a>
             </article>
           </div>
         </section>
 
-
-        <section class="section contact" id="contact">
-          <div class="section-heading">
-            <p class="eyebrow">Contact</p>
-            <h2>Let’s create something meaningful together.</h2>
-          </div>
-          <div class="contact-card">
-            <p>Feel free to reach out for internships, collaborations, job opportunities, project opportunities or film projects.</p>
-            <ul>
-              <li>Email: sithummachado@gmail.com</li>
-              <li><a href="https://www.linkedin.com/in/sithummachado" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">LinkedIn: Sithum Machado</a></li>
-            </ul>
+        <!-- Contact Section -->
+        <section class="section contact-section" id="contact">
+          <div class="contact-box">
+            <span class="section-tag">06 / Get in Touch</span>
+            <h2>Let's build something remarkable.</h2>
+            <p>Whether you have an internship opportunity, a software contract, or a cinematic collaboration in mind, my inbox is always open.</p>
+            <div class="contact-actions">
+              <a href="mailto:sithummachado@gmail.com" class="btn btn-primary">sithummachado@gmail.com</a>
+              <a href="https://www.linkedin.com/in/sithummachado" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">LinkedIn Profile</a>
+            </div>
           </div>
         </section>
       </main>
 
       <footer class="footer">
-        <p>© 2026 Sithum Machado. All Rights Reserved.</p>
-        <a href="#top">Back to top</a>
+        <p>© 2026 Sithum Machado. Crafted with precision.</p>
+        <a href="#top">Back to top ↑</a>
       </footer>
     </div>
+
     <script src="script.js"></script>
   </body>
 </html>
