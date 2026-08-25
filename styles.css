@@ -692,3 +692,14 @@ body {
     display: none;
   }
 }
+
+/* Optional dedicated styling for the Achievements section */
+#achievements .info-card {
+  border-left: 3px solid var(--accent);
+  background: linear-gradient(145deg, rgba(20, 33, 50, 0.98), rgba(12, 22, 35, 0.96));
+}
+
+#achievements .info-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 24px 60px rgba(78, 168, 255, 0.15);
+}
