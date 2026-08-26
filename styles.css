@@ -872,3 +872,26 @@ body {
 .btn-primary {
   transition: transform 0.2s cubic-bezier(0.1, 0.7, 0.1, 1), background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* --- Kinetic Typography Distortion --- */
+.hero-intro h1, .section-header h2 {
+  display: inline-block;
+  transition: transform 0.1s cubic-bezier(0, 0.5, 0.5, 1);
+  will-change: transform;
+}
+
+/* Cyber Data Stream Scans */
+.cyber-glitch-line {
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  pointer-events: none;
+  opacity: 0.4;
+  animation: scanlinePass 6s linear infinite;
+}
+
+@keyframes scanlinePass {
+  0% { transform: translateY(-100vh); }
+  100% { transform: translateY(100vh); }
+}

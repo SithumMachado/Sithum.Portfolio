@@ -182,6 +182,33 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  // Kinetic Velocity Text Warping
+  let lastMouseX = 0;
+  let lastMouseY = 0;
+  let speedMultiplier = 0;
+
+  window.addEventListener('mousemove', (e) => {
+    const deltaX = e.clientX - lastMouseX;
+    const deltaY = e.clientY - lastMouseY;
+    speedMultiplier = Math.sqrt(deltaX * deltaX + deltaY * deltaY) * 0.05;
+    
+    lastMouseX = e.clientX;
+    lastMouseY = e.clientY;
+
+    const mainTitle = document.querySelector('.hero-intro h1');
+    if (mainTitle) {
+      // Skew text dynamically based on physical mouse velocity
+      const skewAngle = Math.max(-15, Math.min(15, deltaX * 0.15));
+      mainTitle.style.transform = `skewX(${skewAngle}deg) scale(${1 + Math.min(speedMultiplier * 0.02, 0.1)})`;
+      
+      // Snap back smoothly when mouse stops
+      clearTimeout(mainTitle.timer);
+      mainTitle.timer = setTimeout(() => {
+        mainTitle.style.transform = 'skewX(0deg) scale(1)';
+      }, 150);
+    }
+  });
+
   // Active nav link on scroll
   const sections = document.querySelectorAll('main section[id]');
   if (sections.length) {
