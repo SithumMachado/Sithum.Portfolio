@@ -798,3 +798,76 @@ body {
   border-color: var(--accent);
   color: var(--accent);
 }
+
+/* --- Professional Custom Cursor (Desktop Only) --- */
+@media (min-width: 900px) {
+  body {
+    cursor: default;
+  }
+  
+  a, button, input, textarea, .info-card, .project-card {
+    cursor: pointer;
+  }
+
+  .custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--accent);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s ease, height 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+    z-index: 99999;
+    opacity: 0.6;
+  }
+
+  .cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 100000;
+  }
+
+  /* Cursor hover state expansion */
+  body.cursor-hover .custom-cursor {
+    width: 55px;
+    height: 55px;
+    background: rgba(78, 168, 255, 0.08);
+    border-color: var(--accent);
+    opacity: 0.9;
+  }
+}
+
+/* --- Scroll Entrance Reveal Animations --- */
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+section.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Elevated Card Shimmer Interaction --- */
+.info-card, .project-card, .hero-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.info-card:hover, .project-card:hover, .hero-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(78, 168, 255, 0.15);
+}
