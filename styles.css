@@ -970,6 +970,6 @@ div:has(> .live-dot) {
 }
 
 div:has(> .live-dot) span:last-child {
-  font-family: var(--font-mono);
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
   letter-spacing: 0.03em;
 }
