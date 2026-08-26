@@ -95,6 +95,47 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // 1. Scroll-Driven Section Reveal Animation
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section').forEach(sec => {
+    sec.classList.add('reveal-section');
+    revealObserver.observe(sec);
+  });
+
+  // 2. Subtle 3D Mouse Parallax Tilt for Cards & Hero Badge
+  const tiltElements = document.querySelectorAll('.hero-card, .bento-card, .film-card, .skill-box');
+  
+  tiltElements.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      
+      // Calculate smooth tilt rotation values
+      const rotateX = (-y / 15).toFixed(2);
+      const rotateY = (x / 15).toFixed(2);
+      
+      card.style.transform = `translateY(-6px) perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'translateY(0px) perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+  });
+
   // Active nav link on scroll
   const sections = document.querySelectorAll('main section[id]');
   if (sections.length) {

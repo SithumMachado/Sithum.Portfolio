@@ -806,3 +806,23 @@ body {
     text-align: center;
   }
 }
+
+/* --- Scroll Reveal Entrance Effects --- */
+.reveal-section {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-section.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- 3D Parallax Tilt Smoothness --- */
+.hero-card, .bento-card, .film-card, .skill-box {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 0.2s cubic-bezier(0.03, 0.98, 0.52, 0.99), border-color 0.3s ease, box-shadow 0.3s ease;
+}
