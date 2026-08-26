@@ -73,53 +73,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Theme Switcher Logic
-const initThemeToggle = () => {
-  // Check for saved user preference or system preference
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme) {
-    document.documentElement.setAttribute('data-theme', savedTheme);
-  }
-
-  // Create the toggle button element dynamically
-  const toggleBtn = document.createElement('button');
-  toggleBtn.className = 'theme-toggle-btn';
-  toggleBtn.setAttribute('aria-label', 'Toggle light/dark mode');
-  toggleBtn.innerHTML = `
-    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-  `;
-  document.body.appendChild(toggleBtn);
-
-  // Show/hide button based on scroll position
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-      toggleBtn.classList.add('visible');
-    } else {
-      toggleBtn.classList.remove('visible');
-    }
-  }, { passive: true });
-
-  // Handle click event to switch themes
-  toggleBtn.addEventListener('click', () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-    
-    if (newTheme === 'light') {
-      document.documentElement.setAttribute('data-theme', 'light');
-      localStorage.setItem('theme', 'light');
-    } else {
-      document.documentElement.removeAttribute('data-theme');
-      localStorage.setItem('theme', 'dark');
-    }
-  });
-};
-
-// Call inside DOMContentLoaded listener
-document.addEventListener('DOMContentLoaded', function () {
-  initThemeToggle();
-  // ... rest of your existing JS initialization ...
-});
-
   // Active nav link on scroll
   const sections = document.querySelectorAll('main section[id]');
   if (sections.length) {
