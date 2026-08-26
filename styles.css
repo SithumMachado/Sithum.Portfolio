@@ -894,3 +894,38 @@ body {
   border-color: var(--accent);
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4), 0 0 25px rgba(56, 189, 248, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
+
+/* --- Theme Toggle Button --- */
+.theme-toggle {
+  background: var(--surface-hover);
+  border: 1px solid var(--border);
+  color: var(--text);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--shadow-elevation);
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* Icon visibility switches based on root theme attribute */
+.theme-toggle .moon-icon {
+  display: block;
+}
+.theme-toggle .sun-icon {
+  display: none;
+}
+
+[data-theme="light"] .theme-toggle .moon-icon {
+  display: none;
+}
+[data-theme="light"] .theme-toggle .sun-icon {
+  display: block;
+}

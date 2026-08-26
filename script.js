@@ -200,6 +200,24 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', setActive, { passive: true });
   }
 
+  // Light / Dark Mode Toggle Logic
+  const themeToggle = document.getElementById('theme-toggle');
+  const htmlElement = document.documentElement;
+
+  // Check for saved user preference in localStorage
+  const savedTheme = localStorage.getItem('theme') || 'dark';
+  htmlElement.setAttribute('data-theme', savedTheme);
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = htmlElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+      htmlElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+  }
+
   // Completely Hide/Show Navbar on Scroll
   let lastScrollTop = 0;
   const navbar = document.querySelector('.navbar');
