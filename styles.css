@@ -868,3 +868,7 @@ body {
     opacity: 0;
   }
 }
+
+.btn-primary {
+  transition: transform 0.2s cubic-bezier(0.1, 0.7, 0.1, 1), background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}

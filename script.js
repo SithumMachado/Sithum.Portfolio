@@ -164,6 +164,24 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 600);
   });
 
+  // Magnetic Physics for Primary Buttons
+  const magneticBtns = document.querySelectorAll('.btn-primary');
+
+  magneticBtns.forEach(btn => {
+    btn.addEventListener('mousemove', (e) => {
+      const rect = btn.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      
+      // Pull button slightly toward the mouse
+      btn.style.transform = `translate(${x * 0.35}px, ${y * 0.35}px)`;
+    });
+
+    btn.addEventListener('mouseleave', () => {
+      btn.style.transform = 'translate(0px, 0px)';
+    });
+  });
+
   // Active nav link on scroll
   const sections = document.querySelectorAll('main section[id]');
   if (sections.length) {
