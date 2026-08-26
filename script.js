@@ -106,18 +106,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Live Clock Functionality
-  const clockElement = document.getElementById('live-clock');
-  if (clockElement) {
-    const updateClock = () => {
-      const now = new Date();
-      // Formats time nicely (e.g., 01:54:12 PM)
-      clockElement.textContent = now.toLocaleTimeString();
-    };
-    updateClock();
-    setInterval(updateClock, 1000);
-  }
-
   // Active nav link on scroll
   const sections = document.querySelectorAll('main section[id]');
   if (sections.length) {
