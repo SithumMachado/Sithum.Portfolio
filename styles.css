@@ -772,3 +772,14 @@ body {
   transform: translateY(-3px) scale(1.05);
   border-color: var(--accent);
 }
+
+/* Mobile-specific fix for the scroll theme toggle */
+@media (max-width: 700px) {
+  .scroll-theme-toggle {
+    bottom: 20px;
+    right: 20px;
+    width: 42px;
+    height: 42px;
+    z-index: 9999; /* Ensures it stays above mobile menus or overlays */
+  }
+}
