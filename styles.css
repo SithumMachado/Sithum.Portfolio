@@ -150,7 +150,7 @@ body {
   grid-template-columns: 1.2fr 0.8fr;
   gap: 40px;
   align-items: center;
-  padding: 120px 0 60px; /* Increased top padding from 80px to 120px to account for the fixed navbar */
+  padding: 160px 0 60px; /* Increased top padding from 120px to 160px */
 }
 
 .status-pill {
