@@ -738,10 +738,10 @@ body {
 /* Scroll-Aware Floating Theme Toggle */
 .scroll-theme-toggle {
   position: fixed;
-  bottom: 75px; /* Raised to avoid mobile system bars */
-  right: 20px;
-  width: 46px;
-  height: 46px;
+  bottom: 24px;
+  right: 16px; /* Moved slightly inward */
+  width: 44px;
+  height: 44px;
   background: var(--surface);
   border: 1px solid var(--border);
   color: var(--text);
@@ -774,9 +774,10 @@ body {
   border-color: var(--accent);
 }
 
+/* Mobile specific safe positioning */
 @media (max-width: 700px) {
   .scroll-theme-toggle {
-    bottom: 80px; /* Safe distance above mobile screen bottom edge */
+    bottom: 30px;
     right: 16px;
     width: 42px;
     height: 42px;
