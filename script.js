@@ -182,6 +182,38 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  // Quantum Gravity Repulsion Physics Engine
+  const quantumCards = document.querySelectorAll('.bento-card, .film-card, .skill-box, .hero-card');
+
+  window.addEventListener('mousemove', (e) => {
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
+
+    quantumCards.forEach(card => {
+      const rect = card.getBoundingClientRect();
+      const cardCenterX = rect.left + rect.width / 2;
+      const cardCenterY = rect.top + rect.height / 2;
+
+      // Calculate distance between mouse and card center
+      const distX = mouseX - cardCenterX;
+      const distY = mouseY - cardCenterY;
+      const distance = Math.sqrt(distX * distX + distY * distY);
+
+      // If mouse gets close (within 250px), apply quantum repulsion physics
+      if (distance < 250) {
+        const force = (1 - distance / 250) * 15; // Repulsion intensity
+        const moveX = -(distX / distance) * force;
+        const moveY = -(distY / distance) * force;
+
+        card.style.transform = `translate(${moveX}px, ${moveY}px) scale(1.02)`;
+        card.style.borderColor = 'var(--accent)';
+      } else {
+        card.style.transform = 'translate(0px, 0px) scale(1)';
+        card.style.borderColor = 'var(--border)';
+      }
+    });
+  });
+
   // Active nav link on scroll
   const sections = document.querySelectorAll('main section[id]');
   if (sections.length) {
