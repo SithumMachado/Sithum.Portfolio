@@ -200,23 +200,23 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', setActive, { passive: true });
   }
 
-  // Smart Hide / Show Navbar on Scroll
+  // Completely Hide/Show Navbar on Scroll
   let lastScrollTop = 0;
   const navbar = document.querySelector('.navbar');
-  const scrollThreshold = 50; // Pixels scrolled before it triggers
+  const scrollThreshold = 40; // Minimum scroll before hiding triggers
 
   window.addEventListener('scroll', () => {
     let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
     if (currentScroll > lastScrollTop && currentScroll > scrollThreshold) {
-      // Scrolling Down -> Hide Navbar
+      // Scrolling Down -> Hide completely
       navbar.classList.add('nav-hidden');
     } else {
-      // Scrolling Up -> Show Navbar
+      // Scrolling Up -> Bring back
       navbar.classList.remove('nav-hidden');
     }
     
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile safe check
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
   }, { passive: true });
 
   const interactiveCards = document.querySelectorAll('.hero-card, .info-card, .project-card, .contact-card, .experience-card, .highlight-card, .stat, .badge');
