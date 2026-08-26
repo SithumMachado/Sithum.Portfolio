@@ -151,6 +151,19 @@ document.addEventListener('DOMContentLoaded', function () {
     heroTitle.appendChild(cursorSpan);
   }
 
+  // Click Ripple Animation Effect
+  document.addEventListener('click', (e) => {
+    const ripple = document.createElement('div');
+    ripple.className = 'click-ripple';
+    ripple.style.left = `${e.clientX}px`;
+    ripple.style.top = `${e.clientY}px`;
+    document.body.appendChild(ripple);
+
+    setTimeout(() => {
+      ripple.remove();
+    }, 600);
+  });
+
   // Active nav link on scroll
   const sections = document.querySelectorAll('main section[id]');
   if (sections.length) {
