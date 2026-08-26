@@ -73,6 +73,28 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // Back to Top Button Functionality
+  const backToTopBtn = document.getElementById('back-to-top');
+
+  if (backToTopBtn) {
+    // Show/hide based on scroll position
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add('show');
+      } else {
+        backToTopBtn.classList.remove('show');
+      }
+    }, { passive: true });
+
+    // Smooth scroll back to top on click
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+
   // Active nav link on scroll
   const sections = document.querySelectorAll('main section[id]');
   if (sections.length) {
