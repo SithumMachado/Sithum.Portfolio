@@ -669,13 +669,28 @@ body {
     border-radius: var(--radius);
     padding: 24px;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch; /* Stretch links across the menu width */
     display: none;
     box-shadow: 0 20px 40px rgba(0,0,0,0.4);
   }
 
   .nav-links.open {
     display: flex;
+  }
+
+  /* Make all nav items (including Let's Talk) span the full width cleanly */
+  .nav-links a {
+    width: 100%;
+    text-align: left;
+  }
+
+  .nav-cta {
+    background: var(--surface-hover);
+    border: 1px solid var(--border);
+    padding: 12px 16px;
+    border-radius: 8px; /* Smooth corners matching mobile design */
+    text-align: center;
+    margin-top: 4px;
   }
 
   .skills-bento {
