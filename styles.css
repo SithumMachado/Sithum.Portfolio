@@ -973,21 +973,3 @@ div:has(> .live-dot) span:last-child {
   font-family: var(--font-mono);
   letter-spacing: 0.03em;
 }
-
-div:has(> .live-dot) {
-  white-space: nowrap !important;
-  max-width: 100% !important;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-}
-
-div:has(> .live-dot) span:last-child {
-  white-space: nowrap !important;
-}
-
-@media (max-width: 480px) {
-  div:has(> .live-dot) {
-    padding: 6px 12px !important;
-    font-size: 0.75rem !important;
-  }
-}
