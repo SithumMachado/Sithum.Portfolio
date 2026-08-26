@@ -735,28 +735,3 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Navbar Left Group (Brand + Theme Button) */
-.nav-left-group {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.nav-theme-toggle {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  color: var(--text);
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: transform 0.2s ease, border-color 0.2s ease;
-}
-
-.nav-theme-toggle:hover {
-  border-color: var(--accent);
-  transform: scale(1.05);
-}

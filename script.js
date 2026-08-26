@@ -73,28 +73,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Theme Toggle Functionality
-  const themeToggle = document.getElementById('theme-toggle');
-  const htmlElement = document.documentElement;
-
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme) {
-    htmlElement.setAttribute('data-theme', savedTheme);
-  }
-
-  if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-      const currentTheme = htmlElement.getAttribute('data-theme');
-      if (currentTheme === 'light') {
-        htmlElement.removeAttribute('data-theme');
-        localStorage.setItem('theme', 'dark');
-      } else {
-        htmlElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-      }
-    });
-  }
-
   // Active nav link on scroll
   const sections = document.querySelectorAll('main section[id]');
   if (sections.length) {
