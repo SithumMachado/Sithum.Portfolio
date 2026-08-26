@@ -930,3 +930,31 @@ body {
   display: block;
 }
 
+/* --- Cinematic Border Beam Animation --- */
+.hero-card, .bento-card.featured {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Create the moving light beam using a pseudo-element */
+.hero-card::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Animate the beam on hover or keep it running subtly */
+.hero-card:hover::after {
+  opacity: 1;
+  animation: borderBeam 3s linear infinite;
+}
+
+@keyframes borderBeam {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
