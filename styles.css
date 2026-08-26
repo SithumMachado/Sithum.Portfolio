@@ -930,26 +930,7 @@ body {
   display: block;
 }
 
-/* --- Upgraded Role Badge --- */
-.role-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  padding: 8px 16px;
-  border-radius: 99px;
-  box-shadow: var(--shadow-elevation);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  position: relative;
-  overflow: hidden;
-}
 
-.role-badge:hover {
-  border-color: var(--accent);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.15);
-}
 
 /* Crisp, glowing core indicator dot */
 .badge-dot {
