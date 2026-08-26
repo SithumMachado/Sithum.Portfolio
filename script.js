@@ -95,42 +95,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // 1. Custom Smooth Cursor Animation
-  const cursor = document.getElementById('custom-cursor');
-  const cursorDot = document.getElementById('cursor-dot');
-
-  if (cursor && cursorDot && window.innerWidth > 900) {
-    window.addEventListener('mousemove', (e) => {
-      cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-      cursorDot.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-    });
-
-    // Expand cursor over interactive links/buttons/cards
-    const interactables = document.querySelectorAll('a, button, .info-card, .project-card');
-    interactables.forEach(el => {
-      el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
-      el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
-    });
-  } else if (cursor && cursorDot) {
-    cursor.style.display = 'none';
-    cursorDot.style.display = 'none';
-  }
-
-  // 2. Scroll Section Reveal Observer
-  const sections = document.querySelectorAll('section');
-  const sectionObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('reveal');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12 });
-
-  sections.forEach(sec => {
-    sectionObserver.observe(sec);
-  });
-
   // Active nav link on scroll
   const sections = document.querySelectorAll('main section[id]');
   if (sections.length) {
