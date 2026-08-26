@@ -738,10 +738,10 @@ body {
 /* Scroll-Aware Floating Theme Toggle */
 .scroll-theme-toggle {
   position: fixed;
-  bottom: 24px;
-  right: 24px;
-  width: 44px;
-  height: 44px;
+  bottom: 30px;
+  right: 20px;
+  width: 46px;
+  height: 46px;
   background: var(--surface);
   border: 1px solid var(--border);
   color: var(--text);
@@ -750,9 +750,11 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 999;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  /* Extremely high z-index to ensure it sits above everything, including mobile nav overlays */
+  z-index: 2147483647; 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   
   /* Hidden by default until scrolled */
   opacity: 0;
@@ -773,13 +775,12 @@ body {
   border-color: var(--accent);
 }
 
-/* Mobile-specific fix for the scroll theme toggle */
+/* Extra safety for mobile screen sizing & safe areas */
 @media (max-width: 700px) {
   .scroll-theme-toggle {
-    bottom: 20px;
-    right: 20px;
-    width: 42px;
-    height: 42px;
-    z-index: 9999; /* Ensures it stays above mobile menus or overlays */
+    bottom: 24px;
+    right: 18px;
+    width: 44px;
+    height: 44px;
   }
 }
