@@ -69,10 +69,12 @@ body {
   backdrop-filter: blur(12px);
   border: 1px solid var(--border);
   border-radius: 99px;
-  position: sticky;
+  position: fixed; /* Keep it fixed in place */
   top: 20px;
+  left: 50%;
+  transform: translateX(-50%); /* Center it perfectly */
+  width: min(1140px, calc(100% - 32px)); /* Match your page shell width */
   z-index: 1000;
-  margin-top: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
@@ -148,7 +150,7 @@ body {
   grid-template-columns: 1.2fr 0.8fr;
   gap: 40px;
   align-items: center;
-  padding: 80px 0 60px;
+  padding: 120px 0 60px; /* Increased top padding from 80px to 120px to account for the fixed navbar */
 }
 
 .status-pill {
