@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if (themeToggle) {
     // Show/hide based on scroll position
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
+      if (window.scrollY > 80) {
         themeToggle.classList.add('show');
       } else {
         themeToggle.classList.remove('show');
