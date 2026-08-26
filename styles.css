@@ -787,3 +787,29 @@ body {
 [data-theme="light"] .film-work .project-card::after {
   background: rgba(224, 242, 254, 0.9);
 }
+
+/* Floating Theme Toggle Button */
+.floating-theme-toggle {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, background-color 0.25s ease;
+}
+
+.floating-theme-toggle:hover {
+  transform: translateY(-3px) scale(1.05);
+  border-color: var(--accent);
+}
