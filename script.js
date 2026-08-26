@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Theme Toggle Functionality
+  // Scroll-Aware Floating Theme Toggle visibility & handling
   const themeToggle = document.getElementById('theme-toggle');
   const htmlElement = document.documentElement;
 
@@ -84,6 +84,16 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   if (themeToggle) {
+    // Show/hide based on scroll position
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        themeToggle.classList.add('show');
+      } else {
+        themeToggle.classList.remove('show');
+      }
+    }, { passive: true });
+
+    // Toggle theme click event
     themeToggle.addEventListener('click', () => {
       const currentTheme = htmlElement.getAttribute('data-theme');
       if (currentTheme === 'light') {

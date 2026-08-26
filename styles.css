@@ -735,56 +735,40 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Theme Toggle Button Style */
-.nav-right-group {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.theme-toggle {
+/* Scroll-Aware Floating Theme Toggle */
+.scroll-theme-toggle {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
   background: var(--surface);
   border: 1px solid var(--border);
   color: var(--text);
-  width: 38px;
-  height: 38px;
   border-radius: 50%;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+  z-index: 999;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
+  
+  /* Hidden by default until scrolled */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px) scale(0.9);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
 }
 
-.theme-toggle:hover {
+/* Shown class triggered by JS on scroll */
+.scroll-theme-toggle.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.scroll-theme-toggle:hover {
+  transform: translateY(-3px) scale(1.05);
   border-color: var(--accent);
-  transform: scale(1.05);
 }
-
-/* Show/Hide Sun & Moon based on active theme */
-[data-theme="light"] .sun-icon { display: none; }
-[data-theme="light"] .moon-icon { display: block; }
-:root:not([data-theme="light"]) .sun-icon { display: block; }
-:root:not([data-theme="light"]) .moon-icon { display: none; }
-
-/* Quick stats & card gradients adjustment for light mode harmony */
-[data-theme="light"] .quick-stats .stat,
-[data-theme="light"] .hero-card,
-[data-theme="light"] .info-card,
-[data-theme="light"] .project-card,
-[data-theme="light"] .contact-card,
-[data-theme="light"] .experience-card,
-[data-theme="light"] .highlight-card {
-  background: var(--surface);
-  box-shadow: var(--shadow);
-}
-
-[data-theme="light"] .film-work .project-card {
-  background: #ffffff;
-  border-color: rgba(2, 132, 199, 0.2);
-}
-
-[data-theme="light"] .film-work .project-card::after {
-  background: rgba(224, 242, 254, 0.9);
-}
-
