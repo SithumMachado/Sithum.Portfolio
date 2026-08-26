@@ -73,20 +73,27 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Floating Actions (Theme Toggle & Back to Top) Functionality
-  const floatingGroup = document.getElementById('floating-actions');
+  // Scroll-Aware Floating Theme Toggle visibility & handling
   const themeToggle = document.getElementById('theme-toggle');
-  const backToTopBtn = document.getElementById('back-to-top');
   const htmlElement = document.documentElement;
 
-  // Load saved user theme preference
+  // Check for saved user preference
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme) {
     htmlElement.setAttribute('data-theme', savedTheme);
   }
 
-  // Theme Toggle Click Event
   if (themeToggle) {
+    // Show/hide based on scroll position
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        themeToggle.classList.add('show');
+      } else {
+        themeToggle.classList.remove('show');
+      }
+    }, { passive: true });
+
+    // Toggle theme click event
     themeToggle.addEventListener('click', () => {
       const currentTheme = htmlElement.getAttribute('data-theme');
       if (currentTheme === 'light') {
@@ -96,24 +103,6 @@ document.addEventListener('DOMContentLoaded', function () {
         htmlElement.setAttribute('data-theme', 'light');
         localStorage.setItem('theme', 'light');
       }
-    });
-  }
-
-  // Scroll Visibility & Back to Top action
-  if (floatingGroup && backToTopBtn) {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 250) {
-        floatingGroup.classList.add('show');
-      } else {
-        floatingGroup.classList.remove('show');
-      }
-    }, { passive: true });
-
-    backToTopBtn.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
     });
   }
 
