@@ -735,51 +735,28 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Scroll-Aware Floating Theme Toggle */
-.scroll-theme-toggle {
-  position: fixed;
-  bottom: 24px;
-  right: 16px; /* Moved slightly inward */
-  width: 44px;
-  height: 44px;
+/* Navbar Left Group (Brand + Theme Button) */
+.nav-left-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-theme-toggle {
   background: var(--surface);
   border: 1px solid var(--border);
   color: var(--text);
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 2147483647; 
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  
-  /* Hidden by default until scrolled */
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(20px) scale(0.9);
-  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
-/* Shown class triggered by JS on scroll */
-.scroll-theme-toggle.show {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0) scale(1);
-}
-
-.scroll-theme-toggle:hover {
-  transform: translateY(-3px) scale(1.05);
+.nav-theme-toggle:hover {
   border-color: var(--accent);
-}
-
-/* Mobile specific safe positioning */
-@media (max-width: 700px) {
-  .scroll-theme-toggle {
-    bottom: 30px;
-    right: 16px;
-    width: 42px;
-    height: 42px;
-  }
+  transform: scale(1.05);
 }
