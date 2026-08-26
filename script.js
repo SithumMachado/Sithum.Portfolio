@@ -182,6 +182,29 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  // Quick Copy Email Functionality
+  const copyEmailBtn = document.getElementById('copy-email-btn');
+
+  if (copyEmailBtn) {
+    copyEmailBtn.addEventListener('click', async (e) => {
+      e.preventDefault();
+      const emailToCopy = copyEmailBtn.getAttribute('data-email');
+
+      try {
+        await navigator.clipboard.writeText(emailToCopy);
+        copyEmailBtn.classList.add('copied');
+
+        // Clear any existing timeout so rapid clicks don't break the animation
+        clearTimeout(copyEmailBtn.timeoutId);
+        copyEmailBtn.timeoutId = setTimeout(() => {
+          copyEmailBtn.classList.remove('copied');
+        }, 2000);
+      } catch (err) {
+        console.error('Failed to copy email: ', err);
+      }
+    });
+  }
+
   // Active nav link on scroll
   const sections = document.querySelectorAll('main section[id]');
   if (sections.length) {
