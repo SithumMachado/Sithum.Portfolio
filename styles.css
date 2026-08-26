@@ -827,19 +827,18 @@ body {
   transition: transform 0.2s cubic-bezier(0.03, 0.98, 0.52, 0.99), border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Staggered Spring Reveal Effect */
-.reveal-section {
-  opacity: 0;
-  transform: translateY(40px) scale(0.97);
-  filter: blur(4px);
-  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), 
-              transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1), 
-              filter 0.7s ease;
-  will-change: opacity, transform, filter;
+/* Blinking Terminal Cursor */
+.terminal-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 28px;
+  background-color: var(--accent);
+  margin-left: 6px;
+  vertical-align: middle;
+  animation: blinkCursor 1s infinite steps(1);
 }
 
-.reveal-section.is-revealed {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-  filter: blur(0px);
+@keyframes blinkCursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }

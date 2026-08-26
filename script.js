@@ -136,6 +136,21 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  // Cinematic Typewriter Effect for Hero Heading
+  const heroTitle = document.querySelector('.hero-intro h1');
+  if (heroTitle) {
+    // Keep your original text or target elements safely
+    const originalHTML = heroTitle.innerHTML;
+    // You can customize this to type out dynamically or parse text nodes
+    const textToType = "Undergraduate CS Student, Developer, and Filmmaker.";
+    
+    // Optional: Only trigger if you want a clean text swap
+    // Let's create a subtle glowing cursor animation injection instead:
+    const cursorSpan = document.createElement('span');
+    cursorSpan.className = 'terminal-cursor';
+    heroTitle.appendChild(cursorSpan);
+  }
+
   // Active nav link on scroll
   const sections = document.querySelectorAll('main section[id]');
   if (sections.length) {
