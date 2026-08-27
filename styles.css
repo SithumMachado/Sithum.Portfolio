@@ -1046,16 +1046,23 @@ div:has(> .live-dot) span:last-child {
   margin: 0;
 }
 
-/* --- Mobile Section Header Alignment Fix --- */
+/* --- Mobile Section Header & Container Alignment Fix --- */
 @media (max-width: 768px) {
+  /* Ensure all sections have safe horizontal margins on mobile */
+  .section, .education-section {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    box-sizing: border-box !important;
+  }
+
   .section-header {
-    padding-left: 4px;
-    padding-right: 4px;
-    margin-bottom: 20px;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-bottom: 20px !important;
   }
   
   .section-header h2 {
-    font-size: 1.6rem;
-    line-height: 1.2;
+    font-size: 1.5rem !important;
+    line-height: 1.2 !important;
   }
 }
