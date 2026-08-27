@@ -973,3 +973,45 @@ div:has(> .live-dot) span:last-child {
   font-family: var(--font-mono);
   letter-spacing: 0.03em;
 }
+
+/* --- Clean Education Bento Box --- */
+.education-card-box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.edu-card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 4px 0;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 12px;
+}
+
+.edu-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.edu-role {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.edu-loc {
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.edu-years {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
