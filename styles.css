@@ -1125,3 +1125,7 @@ div:has(> .live-dot) span:last-child {
   padding-left: 16px;
 }
 
+/* --- Paragraph Spacing Fix --- */
+.about-text-card p + p {
+  margin-top: 18px !important;
+}
