@@ -115,26 +115,6 @@ document.addEventListener('DOMContentLoaded', function () {
     revealObserver.observe(sec);
   });
 
-  // 2. Subtle 3D Mouse Parallax Tilt for Cards & Hero Badge
-  const tiltElements = document.querySelectorAll('.hero-card, .bento-card, .film-card, .skill-box');
-  
-  tiltElements.forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left - rect.width / 2;
-      const y = e.clientY - rect.top - rect.height / 2;
-      
-      // Calculate smooth tilt rotation values
-      const rotateX = (-y / 15).toFixed(2);
-      const rotateY = (x / 15).toFixed(2);
-      
-      card.style.transform = `translateY(-6px) perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-    });
-
-    card.addEventListener('mouseleave', () => {
-      card.style.transform = 'translateY(0px) perspective(1000px) rotateX(0deg) rotateY(0deg)';
-    });
-  });
 
   // Cinematic Typewriter Effect for Hero Heading
   const heroTitle = document.querySelector('.hero-intro h1');

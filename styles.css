@@ -1224,3 +1224,27 @@ div:has(> .live-dot) span:last-child {
     margin-bottom: 0 !important;
   }
 }
+
+/* --- Global Removal of JS 3D Tilt / Rotation --- */
+.hero-card, 
+.bento-card, 
+.film-card, 
+.skill-box, 
+.education-card, 
+.edu-hud-card,
+.about-terminal-card, 
+.timeline-card {
+  transform: none !important;
+  transform-style: flat !important;
+}
+
+.hero-card:hover, 
+.bento-card:hover, 
+.film-card:hover, 
+.skill-box:hover, 
+.education-card:hover, 
+.edu-hud-card:hover,
+.about-terminal-card:hover, 
+.timeline-card:hover {
+  transform: translateY(-6px) !important;
+}
