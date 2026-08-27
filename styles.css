@@ -1269,3 +1269,9 @@ div:has(> .live-dot) span:last-child {
   transform: translateY(-2px);
 }
 
+/* --- Alternative Cinematic Serif Logo --- */
+.brand-name {
+  font-family: "Playfair Display", Georgia, serif !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em !important;
+}
