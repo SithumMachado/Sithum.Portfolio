@@ -1269,3 +1269,18 @@ div:has(> .live-dot) span:last-child {
   transform: translateY(-2px);
 }
 
+@media (max-width: 768px) {
+  .skills-bento,
+  .bento-grid,
+  .films-grid,
+  .education-grid {
+    padding-top: 16px !important;
+  }
+
+  .skill-box:first-child,
+  .bento-card:first-child,
+  .film-card:first-child,
+  .education-card:first-child {
+    margin-top: 12px !important;
+  }
+}
