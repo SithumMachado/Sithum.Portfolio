@@ -1115,3 +1115,70 @@ div:has(> .live-dot) span:last-child {
   }
 }
 
+/* --- About Terminal HUD Card Styling --- */
+.about-terminal-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-elevation);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-terminal-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(56, 189, 248, 0.08);
+}
+
+.terminal-bar {
+  background: var(--surface-hover);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.t-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.t-dot.red { background: #ef4444; }
+.t-dot.yellow { background: #f59e0b; }
+.t-dot.green { background: #10b981; }
+
+.t-title {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-left: 8px;
+}
+
+.terminal-body {
+  padding: 24px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.t-prompt {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.t-output {
+  color: var(--text);
+  padding-left: 16px;
+  margin-bottom: 4px;
+}
+
+.t-highlight {
+  color: #10b981;
+  padding-left: 16px;
+}
