@@ -1203,3 +1203,24 @@ div:has(> .live-dot) span:last-child {
     margin-bottom: 16px !important;
   }
 }
+
+/* --- Fix Mobile Skills Bento Overlap & Clipping --- */
+@media (max-width: 768px) {
+  .skills-bento {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .skill-box {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: unset !important;
+    transform: none !important;
+    overflow: visible !important;
+    margin-bottom: 0 !important;
+  }
+}
