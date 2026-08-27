@@ -1268,3 +1268,31 @@ div:has(> .live-dot) span:last-child {
   box-shadow: 0 0 20px rgba(56, 189, 248, 0.25) !important;
   transform: translateY(-2px);
 }
+
+/* --- Custom Logo & Brand Font Styling --- */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.brand-badge {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.brand-name {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  transition: color 0.3s ease;
+}
+
+.brand:hover .brand-name {
+  color: var(--accent);
+}
