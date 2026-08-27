@@ -1284,3 +1284,23 @@ div:has(> .live-dot) span:last-child {
     margin-top: 12px !important;
   }
 }
+
+/* --- Mobile Starting Card Spacing Fix --- */
+@media (max-width: 768px) {
+  .skills-bento,
+  .bento-grid,
+  .films-grid,
+  .education-grid,
+  .education-timeline {
+    padding-top: 16px !important;
+  }
+
+  .skill-box:first-child,
+  .bento-card:first-child,
+  .film-card:first-child,
+  .education-card:first-child,
+  .experience-card:first-child,
+  .timeline-card:first-child {
+    margin-top: 12px !important;
+  }
+}
