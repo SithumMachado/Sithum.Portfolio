@@ -974,3 +974,74 @@ div:has(> .live-dot) span:last-child {
   letter-spacing: 0.03em;
 }
 
+/* --- Standalone Education Section Styles --- */
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.education-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow-elevation);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.education-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(56, 189, 248, 0.12);
+}
+
+.edu-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.edu-period {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.edu-tag {
+  font-size: 0.72rem;
+  color: var(--muted);
+  background: var(--surface-hover);
+  border: 1px solid var(--border);
+  padding: 3px 10px;
+  border-radius: 99px;
+}
+
+.edu-degree {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.edu-institution {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text);
+  opacity: 0.85;
+  margin-bottom: 12px;
+}
+
+.edu-desc {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0;
+}
