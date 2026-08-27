@@ -1046,23 +1046,44 @@ div:has(> .live-dot) span:last-child {
   margin: 0;
 }
 
-/* --- Mobile Section Header & Container Alignment Fix --- */
+/* --- Targeted Mobile Education Alignment Fix Only --- */
 @media (max-width: 768px) {
-  /* Ensure all sections have safe horizontal margins on mobile */
-  .section, .education-section {
+  /* Force the education section container to have consistent mobile padding */
+  #education, 
+  .education-section {
+    width: 100% !important;
+    max-width: 100% !important;
     padding-left: 16px !important;
     padding-right: 16px !important;
     box-sizing: border-box !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 
-  .section-header {
+  /* Align the education section header with the cards */
+  #education .section-header,
+  .education-section .section-header {
     padding-left: 0 !important;
-    padding-right: 0 !important;
-    margin-bottom: 20px !important;
+    margin-left: 0 !important;
+    margin-bottom: 16px !important;
   }
-  
-  .section-header h2 {
-    font-size: 1.5rem !important;
-    line-height: 1.2 !important;
+
+  /* Force the education grid and cards to stack uniformly with zero offset */
+  .education-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .education-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    box-sizing: border-box !important;
   }
 }
