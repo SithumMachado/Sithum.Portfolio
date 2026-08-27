@@ -974,3 +974,39 @@ div:has(> .live-dot) span:last-child {
   letter-spacing: 0.03em;
 }
 
+/* --- Quick Facts Bento Card Upgrades --- */
+
+/* Target the container card (adjust selector if your HTML class differs) */
+.quick-facts-card, div:has(> .quick-facts-title), .bento-card:has(text()) {
+  /* Ensure smooth styling context */
+}
+
+/* Style the main title */
+.quick-facts-card h3, .quick-facts-title, .bento-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 12px;
+}
+
+/* Transform text rows into clean spaced items */
+.quick-facts-card p, .quick-facts-card div, .bento-card p {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+/* Style the bold label keys to pop out cleanly */
+.quick-facts-card strong, .bento-card strong {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  display: inline-block;
+  margin-right: 6px;
+}
