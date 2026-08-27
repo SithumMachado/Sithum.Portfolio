@@ -1131,35 +1131,25 @@ div:has(> .live-dot) span:last-child {
 }
 
 
-/* --- Streamlined 100% Width Footer --- */
+/* --- Professional Compact Footer Styles --- */
 .footer-section {
   border-top: 1px solid var(--border);
-  padding: 40px 0 20px;
+  padding: 50px 0 24px;
   background: var(--bg);
-  width: 100%;
-}
-
-.footer-container {
-  width: 100%;
-  max-width: 100%;
-  padding-left: max(5vw, 24px);
-  padding-right: max(5vw, 24px);
-  box-sizing: border-box;
 }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1.2fr;
-  gap: 40px;
+  grid-template-columns: 1.4fr 0.8fr 1.2fr;
+  gap: 30px;
   align-items: start;
 }
 
 .footer-brand {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: var(--text);
   margin-bottom: 8px;
-  font-family: var(--font-sans);
 }
 
 .footer-brand .accent-dot {
@@ -1168,10 +1158,10 @@ div:has(> .live-dot) span:last-child {
 
 .footer-bio {
   color: var(--muted);
-  font-size: 0.9rem;
-  line-height: 1.4;
-  margin-bottom: 12px;
-  max-width: 320px;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  margin-bottom: 14px;
+  max-width: 300px;
 }
 
 .footer-location {
@@ -1184,11 +1174,11 @@ div:has(> .live-dot) span:last-child {
 }
 
 .footer-col h4 {
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   color: var(--text);
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   font-family: var(--font-mono);
 }
 
@@ -1202,7 +1192,7 @@ div:has(> .live-dot) span:last-child {
 .footer-nav-links a {
   color: var(--muted);
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   transition: var(--transition);
 }
 
@@ -1218,7 +1208,7 @@ div:has(> .live-dot) span:last-child {
   color: var(--muted);
   text-decoration: none;
   font-size: 0.88rem;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   transition: var(--transition);
 }
 
@@ -1232,8 +1222,8 @@ div:has(> .live-dot) span:last-child {
 }
 
 .social-icon-btn {
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 50%;
@@ -1251,8 +1241,8 @@ div:has(> .live-dot) span:last-child {
 }
 
 .footer-bottom {
-  margin-top: 24px;
-  padding-top: 16px;
+  margin-top: 36px;
+  padding-top: 20px;
   border-top: 1px solid var(--border);
   text-align: center;
   color: var(--muted);
@@ -1263,10 +1253,10 @@ div:has(> .live-dot) span:last-child {
   margin: 0;
 }
 
-/* Responsive Footer Adaptation */
+/* Responsive Footer Stack */
 @media (max-width: 768px) {
   .footer-grid {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 28px;
   }
 }
