@@ -1045,3 +1045,17 @@ div:has(> .live-dot) span:last-child {
   line-height: 1.5;
   margin: 0;
 }
+
+/* --- Mobile Section Header Alignment Fix --- */
+@media (max-width: 768px) {
+  .section-header {
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-bottom: 20px;
+  }
+  
+  .section-header h2 {
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+}
