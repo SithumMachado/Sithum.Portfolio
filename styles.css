@@ -1124,3 +1124,14 @@ div:has(> .live-dot) span:last-child {
   color: #10b981;
   padding-left: 16px;
 }
+
+
+
+/* --- Completely Disable JS Card Tilt/Rotation Effect --- */
+.hero-card, .bento-card, .film-card, .skill-box, .education-card, .about-terminal-card, .timeline-card {
+  transform: none !important;
+}
+
+.hero-card:hover, .bento-card:hover, .film-card:hover, .skill-box:hover, .education-card:hover, .about-terminal-card:hover, .timeline-card:hover {
+  transform: translateY(-6px) !important;
+}
