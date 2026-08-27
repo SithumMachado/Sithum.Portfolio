@@ -1087,3 +1087,30 @@ div:has(> .live-dot) span:last-child {
     box-sizing: border-box !important;
   }
 }
+
+/* --- Match Education Card Alignment to Other Sections on Mobile --- */
+@media (max-width: 768px) {
+  #education, 
+  .education-section {
+    padding-left: var(--container-padding, 16px) !important;
+    padding-right: var(--container-padding, 16px) !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Match the grid wrapper behavior of other sections */
+  .education-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  /* Ensure the cards respect the section bounds identically to bento/timeline cards */
+  .education-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+  }
+}
