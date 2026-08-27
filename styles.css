@@ -1131,3 +1131,75 @@ div:has(> .live-dot) span:last-child {
 }
 
 
+/* --- Ultimate Mobile Layout & Card Fix --- */
+@media (max-width: 768px) {
+  /* Lock viewport boundaries */
+  html, body {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Force the page shell and sections to have safe mobile margins */
+  .page-shell {
+    width: calc(100% - 24px) !important;
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+  }
+
+  .section {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Force all grids to single-column stack with equal width */
+  .about-grid,
+  .education-timeline,
+  .education-grid,
+  .bento-grid,
+  .films-grid,
+  .skills-bento,
+  .footer-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Force every single card type to fill 100% cleanly without breaking out */
+  .bento-card,
+  .education-card,
+  .edu-hud-card,
+  .timeline-card,
+  .skill-box,
+  .film-card,
+  .hero-card,
+  .about-text-card,
+  .about-terminal-card,
+  .contact-box {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Reset section headers alignment for mobile */
+  .section-header {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    margin-bottom: 16px !important;
+  }
+}
