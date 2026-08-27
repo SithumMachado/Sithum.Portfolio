@@ -1046,50 +1046,23 @@ div:has(> .live-dot) span:last-child {
   margin: 0;
 }
 
-/* --- Strict Mobile Card & Container Alignment Fix --- */
+/* --- Mobile Section Header & Container Alignment Fix --- */
 @media (max-width: 768px) {
-  /* Force main sections and grids to use exact, equal horizontal padding */
-  .section, 
-  .education-section,
-  .skills-bento,
-  .bento-grid,
-  .films-grid {
-    width: 100% !important;
-    max-width: 100% !important;
+  /* Ensure all sections have safe horizontal margins on mobile */
+  .section, .education-section {
     padding-left: 16px !important;
     padding-right: 16px !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
     box-sizing: border-box !important;
   }
 
-  /* Make sure every grid component spans the full content width evenly */
-  .education-grid {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 16px !important;
-    width: 100% !important;
-    margin: 0 !important;
-  }
-
-  /* Force every card to have identical width, zero offset, and proper box-sizing */
-  .education-card, 
-  .timeline-card, 
-  .bento-card, 
-  .skill-box, 
-  .film-card {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    box-sizing: border-box !important;
-  }
-
-  /* Align section titles precisely with the cards */
   .section-header {
     padding-left: 0 !important;
-    margin-left: 0 !important;
-    margin-bottom: 16px !important;
+    padding-right: 0 !important;
+    margin-bottom: 20px !important;
+  }
+  
+  .section-header h2 {
+    font-size: 1.5rem !important;
+    line-height: 1.2 !important;
   }
 }
