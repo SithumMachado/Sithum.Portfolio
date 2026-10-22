@@ -1366,6 +1366,7 @@ div:has(> .live-dot) span:last-child {
   max-width: 720px;
   margin: 0 auto 28px;
   font-size: clamp(1rem, 1.5vw, 1.12rem);
+  text-align: center;
 }
 
 .hero-actions {
