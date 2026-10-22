@@ -1549,6 +1549,15 @@ div:has(> .live-dot) span:last-child {
     padding: 132px 0 52px;
   }
 
+  .hero-desc {
+    width: 100%;
+    max-width: 36rem;
+    margin: 0 auto 24px;
+    padding: 0 8px;
+    line-height: 1.65;
+    text-align: center;
+  }
+
   .hero-section::before {
     top: 100px;
     height: 380px;
